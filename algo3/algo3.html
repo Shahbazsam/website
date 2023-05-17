@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PROJECT IT </title>
+    <link rel="stylesheet" href="../style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+
+<body>
+    <nav class="sidebar">
+        <a href="#" class="logo">Clusterization</a>
+
+        <div class="menu-content">
+            <ul class="menu-items">
+                <div class="menu-title">
+                    <stronger>Menu</stronger>
+                </div>
+
+                <li class="item">
+                    <a href="../website.html">Main Page</a>
+                </li>
+
+                <li class="item">
+                    <div class="submenu-item">
+                        <span>Our Work</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+
+                    <ul class="menu-items submenu">
+                        <div class="menu-title">
+                            <i class="fa-solid fa-chevron-left"></i>
+                            SUBMENU.
+                        </div>
+                        <li class="item">
+                            <a href="../algo1/A.html">A*</a>
+                        </li>
+                        <li class="item">
+                            <a href="../algo2/algo2.html">Clusterization</a>
+                        </li>
+                        <li class="item">
+                            <a href="#">Genetic Algo</a>
+                        </li>
+                        <li class="item">
+                            <a href="../algo4/algo4.html">Ant Algo</a>
+                        </li>
+                        <li class="item">
+                            <a href="#">Decision Tree</a>
+                        </li>
+                        <li class="item">
+                            <a href="#">Neural Network</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <div class="submenu-item">
+                        <span>Second submenu</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+
+                    <ul class="menu-items submenu">
+                        <div class="menu-title">
+                            <i class="fa-solid fa-chevron-left"></i>
+                            SUBMENU.
+
+
+                            <li class="item">
+                                <a href="#">Your second link</a>
+                            </li>
+
+                            <li class="item">
+                                <a href="#">Your third link</a>
+                            </li>
+                    </ul>
+        </div>
+    </nav>
+
+    <nav class="navbar">
+        <ul>
+            <i class="fa-solid fa-bars" id="sidebar-close"></i>
+            Higher IT Project
+        </ul>
+    </nav>
+
+    <main class="main">
+        <div class="div1">
+            <h1>GENETIC ALGORITHM.</h1>
+            <label for="Mutation Rate">Mutation Rate</label>
+            <input type="number" step="any" id="mutationRate" value="0.2">
+            <label for="populationSize">Population Size</label>
+            <input type="number" id="populationSize" value="200">
+            <label for="maxGenerations">Max Generations</label>
+            <input type="number" id="maxGenerations" value="500">
+            <button onclick="startButton()">Start</button>
+            <button onclick="clearButton()">Clear</button>
+            <div class="exit">
+                <a href="../website.html" class="exit1">EXIT</a>
+            </div>
+        </div>
+        <div class="div1">
+            <canvas id="myCanvas" width="800" height="600"></canvas>
+        </div>
+    </main>
+    <script src="algo3.js"></script>
+</body>
+<script src="../style.js"></script>
+
+</html>
