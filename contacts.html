@@ -6,24 +6,25 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PROJECT IT </title>
-  <link rel="stylesheet" href="../style.css" />
+  <title>Sidebar Menu </title>
+  <link rel="stylesheet" href="style.css" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 </head>
 
 <body>
   <nav class="sidebar">
-    <a href="#" class="logo">A* algorithm.</a>
-    <br>
+    <a href="#" class="logo">Main Page</a>
 
     <div class="menu-content">
       <ul class="menu-items">
         <div class="menu-title">
-          <stronger>Menu</stronger>
+          <a class="logo"> MENU </a>
+
         </div>
 
         <li class="item">
-          <a href="../website.html">Main Page</a>
+          <a href="website.html">Main Page</a>
         </li>
 
         <li class="item">
@@ -35,19 +36,19 @@
           <ul class="menu-items submenu">
             <div class="menu-title">
               <i class="fa-solid fa-chevron-left"></i>
-              SUBMENU.
+              Your submenu title
             </div>
             <li class="item">
-              <a href="#">A*</a>
+              <a href="algo1/A.html">A*</a>
             </li>
             <li class="item">
-              <a href="../algo2/algo2.html">Clusterization</a>
+              <a href="algo2/algo2.html">Clusterization</a>
             </li>
             <li class="item">
-              <a href="../algo3/algo3.html">Genetic Algo</a>
+              <a href="algo3/algo3.html">Genetic Algo</a>
             </li>
             <li class="item">
-              <a href="../algo4/algo4.html">Ant Algo</a>
+              <a href="algo4/algo4.html">Ant Algo</a>
             </li>
             <li class="item">
               <a href="#">Decision Tree</a>
@@ -66,81 +67,30 @@
           <ul class="menu-items submenu">
             <div class="menu-title">
               <i class="fa-solid fa-chevron-left"></i>
-              SUBMENU.
+                CONTACTS.
 
 
               <li class="item">
-                <a href="#">Your second link</a>
+                <a href="#">Mohammad shahbaz.</a>
               </li>
 
               <li class="item">
-                <a href="#">Your third link</a>
+                <a href="contact.html">Sambhav bajaj.</a>
               </li>
           </ul>
     </div>
   </nav>
 
   <nav class="navbar">
-    <ul>
-      <i class="fa-solid fa-bars" id="sidebar-close"></i>
-      Higher IT Project
-    </ul>
+    <i class="fa-solid fa-bars" id="sidebar-close"></i>
   </nav>
-  <br>
 
   <main class="main">
-    <div class="div1">
-      <h1>A* Algorithm</h1>
-      <br>
-      <label for="gridSize">Grid Size (n x n):</label>
-      <input type="number" id="gridSizeInput" value="20"><br>
-      <button id="gridSizeBtn">Create Grid</button>
-
-    </div>
-    <br>
-    <div class="div1">
-      <br>
-      <br>
-      <br>
-      <canvas id="canvas"></canvas>
-      <br>
-      <br>
-      <br>
-    </div>
-
-    <br>
-
-    <div class="div1">
-      <button id="start-btn">Find Shortest Path</button>
-      <br>
-      <br>
-      <select id="heuristic-select">
-        <option value="euclidean">Euclidean</option>
-        <option value="manhattan">Manhattan</option>
-      </select>
-      <button id="refresh-btn">Refresh</button>
-      <br>
-      <br>
-      
-
-      <div class="exit">
-        <a href="../website.html" class="exit1">EXIT</a>
-      </div>
-    </div>
-    <div class="div1">
-      <h7>Click : start point <br>
-        command : block <br>
-        Shift : end point
-      </h7>
-
-    </div>
-
-
-
+    <h1>Links to contact me.</h1>
+    <P></P>
   </main>
-  <script id="myFrame" src="algo1.js"></script>
 
+  <script src="style.js"></script>
 </body>
-<script src="../style.js"></script>
 
 </html>

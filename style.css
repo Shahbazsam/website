@@ -127,7 +127,7 @@
 }
 
 canvas {
-  border: 5px solid red;
+  border: 7px solid grey;
 }
 /*
 div {
@@ -138,39 +138,98 @@ div {
 
 .div1 {
   margin: 20px;
-  padding: 10px 20px;
-  border: 5px solid grey;
+  padding: 10px 10px;
+  border: 6px solid black;
+  min-height: 50px;
+}
+
+.div {
+  margin: 20px;
+  padding: 10px 10px;
+  border: 6px solid black;
   min-height: 50px;
 }
 
 .btn {
-  height: 20px;
-  width: 200px;
+  height: 60px;
+  width: 300px;
   display: inline-block;
   background: #484d52;
   color: #fff;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 2rem;
   text-decoration: none;
-  border-radius: 3px;
+  border-radius: 10px;
 
 }
 
 .exit {
   position: absolute;
-  top: 80px;
+  top: 100px;
   right: 10px;
 }
 
 .exit1 {
-  height: 50px;
-  width: 80px;
-  display: inline-block;
-  background: #484d52;
-  color: #fff;
-  padding: 1rem 1.5rem;
-  text-decoration: none;
-  border-radius: 5px;
+
+  background-color: rgb(149, 185, 174);
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
 }
 
+.exit1:hover{
+  background-color: rgb(45, 50, 49);
+}
+
+.exit1:active {
+  background-color: maroon;
+}
+
+  /* Style for the button */
+  button {
+    background-color: rgb(149, 185, 174);
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  
+  /* Style for the button when hovered over */
+  button:hover {
+    background-color:   rgb(45, 50, 49);
+    ;
+  }
+  
+  /* Style for the button when it's clicked */
+  button:active {
+    background-color: maroon;
+  }
+  
+  
+  
+  select option {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333333;
+    background-color: #800000;
+    padding: 5px 10px;
+  }
+  
+  h7 {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #f3f3f3;
+    background-color:black;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  #myFrame {
+    width: 100px;
+    height: 100px;
+    border: 5px solid rgb(255, 2, 2);
+  }
 
 

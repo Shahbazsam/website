@@ -1,28 +1,28 @@
+var myFrame = document.getElementById("myFrame");
+myFrame.style.borderColor = "red";
+
 var refreshBtn = document.getElementById("refresh-btn");
-  refreshBtn.addEventListener("click", function() {
-    location.reload();
-  });
+refreshBtn.addEventListener("click", function() {
+  location.reload();
+});
 
-
-var canvas = document.getElementById("myCanvas");
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var startBtn = document.getElementById("start-btn");
 var heuristicSelect = document.getElementById("heuristic-select");
+var gridSizeInput = document.getElementById("gridSizeInput");
+var gridSizeBtn = document.getElementById("gridSizeBtn");
 
-// Define the size of each cell in the grid
 var cellSize = 30;
-
-// Define the number of rows and columns in the grid
 var numRows = 20;
 var numCols = 20;
+var grid = [];
 
-// Create a 2D array to store the grid cells
-var grid = new Array(numRows);
+// Initialize the grid cells
 for (var i = 0; i < numRows; i++) {
   grid[i] = new Array(numCols);
 }
 
-// Initialize the grid cells
 for (var i = 0; i < numRows; i++) {
   for (var j = 0; j < numCols; j++) {
     grid[i][j] = {
@@ -42,6 +42,9 @@ for (var i = 0; i < numRows; i++) {
 
 // Draw the grid on the canvas
 function drawGrid() {
+  canvas.width = numCols * cellSize;
+  canvas.height = numRows * cellSize;
+
   for (var i = 0; i < numRows; i++) {
     for (var j = 0; j < numCols; j++) {
       var cell = grid[i][j];
@@ -63,6 +66,76 @@ function fillCell(cell, color) {
   ctx.fillStyle = color;
   ctx.fillRect(cell.j * cellSize, cell.i * cellSize, cellSize, cellSize);
 }
+
+// Initialize the grid on page load
+drawGrid();
+
+// Add event listeners
+startBtn.addEventListener("click", function() {
+  findShortestPath();
+});
+
+gridSizeBtn.addEventListener("click", function() {
+  numRows = Number(gridSizeInput.value);
+  numCols = numRows;
+  grid = [];
+
+  for (var i = 0; i < numRows; i++) {
+    grid[i] = new Array(numCols);
+  }
+
+  for (var i = 0; i < numRows; i++) {
+    for (var j = 0; j < numCols; j++) {
+      grid[i][j] = {
+        i: i,
+        j: j,
+        wall: false,
+        start: false,
+        end: false,
+        visited: false,
+        parent: null,
+        g: Infinity,
+        h: 0,
+        f: Infinity
+      };
+    }
+  }
+
+  drawGrid();
+});
+
+gridSizeInput.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    numRows = Number(gridSizeInput.value);
+    numCols = numRows;
+    grid = [];
+
+    for (var i = 0; i < numRows; i++) {
+      grid[i] = new Array(numCols);
+    }
+
+    for (var i = 0; i < numRows; i++) {
+      for (var j = 0; j < numCols; j++) {
+        grid[i][j] = {
+          i: i,
+          j: j,
+          wall: false,
+          start: false,
+          end: false,
+          visited: false,
+          parent: null,
+          g: Infinity,
+          h: 0,
+          f: Infinity
+        };
+      }
+    }
+
+    drawGrid();
+  }
+});
+
+// Rest of the code...
 
 // Add event listeners to the canvas to allow the user to place markers and walls
 canvas.addEventListener("mousedown", function(event) {
@@ -283,8 +356,3 @@ function PriorityQueue() {
 canvas.width = numCols * cellSize;
 canvas.height = numRows * cellSize;
 drawGrid();
-
-// Add event listener to the start button to start the algorithm
-startBtn.addEventListener("click", function() {
-  findShortestPath();
-});

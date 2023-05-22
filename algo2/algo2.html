@@ -6,13 +6,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PROJECT IT </title>
+  <title>  PROJECT IT </title>
   <link rel="stylesheet" href="../style.css" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 </head>
 
 <body>
+
   <nav class="sidebar">
     <a href="#" class="logo">Clusterization</a>
 
@@ -21,7 +22,7 @@
         <div class="menu-title">
           <stronger>Menu</stronger>
         </div>
-
+        
         <li class="item">
           <a href="../website.html">Main Page</a>
         </li>
@@ -88,22 +89,24 @@
   </nav>
 
   <main class="main">
+
+
     <div class="div1">
-      <h1>K-means clustring algorithm.</h1>
+  
+      <h1>K-means clustring algorithm.</h1><br>
       <label for="clusterNum">Number of clusters</label>
 
-      <input type="number" id="clusterNum" value="2">
-      <button onclick="startButton()">Start</button>
-      <button onclick="clearButton()">Clear</button>
+      <input type="number" id="clusterNum" value="2"><br><br>
+      <button onclick="startButton()"> Start </button>
+      <button onclick="clearButton()"> Clear </button>
       <div class="exit">
         <a href="../website.html" class="exit1">EXIT</a>
       </div>
     </div>
     <div class="div1">
       <canvas id="myCanvas" width="800" height="600"></canvas>
-    </div>
     
-  </main>
+    </div>
   <script src="algo2.js"></script>
 </body>
 <script src="../style.js"></script>
